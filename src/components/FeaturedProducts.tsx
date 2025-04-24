@@ -99,7 +99,7 @@ const FeaturedProducts: React.FC = () => {
                     <button
                       onClick={() => addToCart(product)}
                       className="p-3 rounded-full bg-primary-50 text-primary hover:bg-primary-100 transition-colors duration-300"
-                      aria-label={`Add ${product.name} to cart`}
+                      aria-label={`Add ${product.name} to basket`}
                     >
                       <ShoppingCart weight="bold" className="w-5 h-5" />
                     </button>

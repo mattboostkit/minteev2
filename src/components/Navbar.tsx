@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
             <img
               src="https://ik.imagekit.io/boostkit/Mintee/Mintee%20Logo.png?updatedAt=1745526582680"
               alt="Mintee Logo"
-              className="h-10"
+              className="h-8 md:h-10"
             />
           </Link>
 
@@ -118,7 +118,7 @@ const Navbar: React.FC = () => {
                   <img
                     src="https://ik.imagekit.io/boostkit/Mintee/Mintee%20Logo.png?updatedAt=1745526582680"
                     alt="Mintee Logo"
-                    className="h-10"
+                    className="h-8"
                   />
                 </Link>
                 <button

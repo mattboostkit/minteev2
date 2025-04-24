@@ -69,7 +69,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
                 }`}
               >
                 <ShoppingCart weight="bold" className="w-5 h-5 mr-2" />
-                Add to Cart
+                Add to Basket
               </button>
             </div>
           </div>

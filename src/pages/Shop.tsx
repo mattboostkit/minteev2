@@ -13,11 +13,11 @@ const Shop: React.FC = () => {
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
   const [isInfoOpen, setIsInfoOpen] = useState(false);
   const { cartItems } = useCart();
-  
+
   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
-  
+
   const categories = ['Classic', 'Strong', 'Flavoured', 'Multipacks'];
-  
+
   const filteredProducts = categoryFilter
     ? products.filter(product => product.category === categoryFilter)
     : products;
@@ -29,7 +29,7 @@ const Shop: React.FC = () => {
         setIsInfoOpen(true);
       }
     }, 2000);
-    
+
     return () => clearTimeout(showInfoTimeout);
   }, [cartItems.length]);
 
@@ -46,8 +46,8 @@ const Shop: React.FC = () => {
             >
               Our Products
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -55,7 +55,7 @@ const Shop: React.FC = () => {
             >
               Shop Mintee Products
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -67,23 +67,23 @@ const Shop: React.FC = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="container mx-auto py-16">
         <div className="flex items-center justify-between mb-8 md:hidden">
           <button
             onClick={() => setIsMobileFilterOpen(!isMobileFilterOpen)}
             className="flex items-center gap-2 px-4 py-2 bg-neutral-100 rounded-lg"
           >
-            <SlidersHorizontal className="w-5 h-5" />
+            <SlidersHorizontal className="w-6 h-6" />
             <span>Filters</span>
           </button>
-          
+
           <button
             onClick={() => setIsCartOpen(true)}
             className="relative flex items-center gap-2 px-4 py-2 bg-primary-50 text-primary rounded-lg"
           >
-            <ShoppingCart className="w-5 h-5" />
-            <span>Cart</span>
+            <ShoppingCart className="w-6 h-6" />
+            <span>Basket</span>
             {totalItems > 0 && (
               <span className="absolute -top-2 -right-2 w-6 h-6 flex items-center justify-center bg-primary text-white text-xs font-medium rounded-full">
                 {totalItems}
@@ -91,23 +91,23 @@ const Shop: React.FC = () => {
             )}
           </button>
         </div>
-        
+
         <div className="flex flex-col md:flex-row justify-between items-start gap-10">
           <div className={`w-full md:w-72 md:block ${isMobileFilterOpen ? 'block' : 'hidden'}`}>
             <div className="bg-white p-8 rounded-2xl shadow-md sticky top-24">
               <div className="flex items-center mb-6">
-                <FilterIcon className="w-5 h-5 mr-3 text-primary" />
+                <FilterIcon className="w-6 h-6 mr-3 text-primary" />
                 <h3 className="font-inter-tight font-semibold text-xl">Filters</h3>
               </div>
-              
+
               <div className="mb-8">
                 <h4 className="font-medium mb-4 text-neutral-900">Categories</h4>
                 <div className="space-y-3">
                   <button
                     onClick={() => setCategoryFilter(null)}
                     className={`block w-full text-left px-4 py-2.5 rounded-lg text-sm ${
-                      categoryFilter === null 
-                        ? 'bg-gradient-to-r from-primary to-primary-600 text-white font-medium' 
+                      categoryFilter === null
+                        ? 'bg-gradient-to-r from-primary to-primary-600 text-white font-medium'
                         : 'hover:bg-neutral-100'
                     }`}
                   >
@@ -118,8 +118,8 @@ const Shop: React.FC = () => {
                       key={category}
                       onClick={() => setCategoryFilter(category)}
                       className={`block w-full text-left px-4 py-2.5 rounded-lg text-sm ${
-                        categoryFilter === category 
-                          ? 'bg-gradient-to-r from-primary to-primary-600 text-white font-medium' 
+                        categoryFilter === category
+                          ? 'bg-gradient-to-r from-primary to-primary-600 text-white font-medium'
                           : 'hover:bg-neutral-100'
                       }`}
                     >
@@ -128,19 +128,19 @@ const Shop: React.FC = () => {
                   ))}
                 </div>
               </div>
-              
+
               <div className="hidden md:block">
                 <button
                   onClick={() => setIsCartOpen(true)}
                   className="flex items-center justify-center w-full btn btn-primary"
                 >
-                  <ShoppingCart className="w-5 h-5 mr-2" />
-                  View Cart {totalItems > 0 && `(${totalItems})`}
+                  <ShoppingCart className="w-6 h-6 mr-2" />
+                  View Basket {totalItems > 0 && `(${totalItems})`}
                 </button>
               </div>
             </div>
           </div>
-          
+
           <div className="flex-grow">
             <div className="mb-8 flex justify-between items-center">
               <h2 className="font-inter-tight font-semibold text-2xl">
@@ -148,14 +148,14 @@ const Shop: React.FC = () => {
               </h2>
               <p className="text-neutral-500 font-medium">{filteredProducts.length} products</p>
             </div>
-            
+
             <ProductList products={filteredProducts} />
           </div>
         </div>
       </div>
-      
-      <Cart 
-        isOpen={isCartOpen} 
+
+      <Cart
+        isOpen={isCartOpen}
         onClose={() => setIsCartOpen(false)}
       />
 
