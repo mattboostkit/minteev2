@@ -32,7 +32,7 @@ const BenefitsSection: React.FC = () => {
     {
       icon: <Check weight="bold" className="h-8 w-8 text-primary" />,
       title: "Naturally Good",
-      description: "No artificial sweeteners, flavors, or preservatives. Just natural goodness in every sip."
+      description: "No artificial sweeteners, flavours, or preservatives. Just natural goodness in every sip."
     }
   ];
 
@@ -40,7 +40,7 @@ const BenefitsSection: React.FC = () => {
     <section className="py-28 md:py-36 bg-white relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-primary-50 opacity-50 blur-3xl"></div>
-      
+
       <div className="container mx-auto relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-24">
           <motion.div
@@ -52,8 +52,8 @@ const BenefitsSection: React.FC = () => {
           >
             Why Choose Us
           </motion.div>
-          
-          <motion.h2 
+
+          <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -62,7 +62,7 @@ const BenefitsSection: React.FC = () => {
           >
             Better for you, <span className="text-gradient">better for all</span>
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -73,19 +73,19 @@ const BenefitsSection: React.FC = () => {
             Our peppermint-infused water is designed to refresh you naturally while providing functional benefits that support your active lifestyle.
           </motion.p>
         </div>
-        
+
         {/* Bento grid layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`rounded-2xl p-10 ${
-                index === 0 ? 'bg-gradient-to-br from-primary-50 to-primary-100/50 md:row-span-2 shadow-md' : 
-                index === 3 ? 'bg-gradient-to-r from-primary-600 to-primary-500 text-white md:col-span-2 shadow-md' : 
+                index === 0 ? 'bg-gradient-to-br from-primary-50 to-primary-100/50 md:row-span-2 shadow-md' :
+                index === 3 ? 'bg-gradient-to-r from-primary-600 to-primary-500 text-white md:col-span-2 shadow-md' :
                 'bg-white border border-neutral-100 shadow-soft hover:shadow-md hover:border-primary-100 transition-all duration-300'
               }`}
             >
@@ -94,13 +94,13 @@ const BenefitsSection: React.FC = () => {
               }`}>
                 {benefit.icon}
               </div>
-              
+
               <h3 className={`font-inter-tight font-semibold text-xl md:text-2xl mb-4 ${
                 index === 3 ? 'text-white' : 'text-neutral-900'
               }`}>
                 {benefit.title}
               </h3>
-              
+
               <p className={`${index === 3 ? 'text-white/90' : 'text-neutral-600'} leading-relaxed`}>
                 {benefit.description}
               </p>

@@ -17,8 +17,8 @@ const Story: React.FC = () => {
             >
               About Us
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -26,7 +26,7 @@ const Story: React.FC = () => {
             >
               Our Story
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -38,12 +38,12 @@ const Story: React.FC = () => {
           </div>
         </div>
       </div>
-      
+
       <section className="py-20 md:py-28 relative overflow-hidden">
         {/* Background element */}
         <div className="absolute inset-0 bg-white"></div>
         <div className="absolute -bottom-40 -right-40 w-[600px] h-[600px] rounded-full bg-primary-50 opacity-60 blur-3xl"></div>
-        
+
         <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -57,16 +57,28 @@ const Story: React.FC = () => {
               </div>
               <h2 className="font-inter-tight font-bold text-4xl md:text-5xl mb-6">The Mintee Story</h2>
               <p className="text-neutral-700 text-lg mb-6">
-                Mintee was born in 2018 in the kitchen of our founder, Sarah O'Connell, who was searching for a naturally refreshing drink without the sugar and additives found in most beverages.
+                I've been drinking peppermint tea for as long as I can remember. It helped with bloating, soothed my headaches, and was my go-to for caffeine-free hydration. But honestly? Plain water just didn't excite me.
               </p>
               <p className="text-neutral-700 text-lg mb-6">
-                Inspired by her grandmother's traditional peppermint tea recipe, Sarah experimented with creating a modern, ready-to-drink version that maintained all the refreshing and digestive benefits of peppermint.
+                So I started chilling peppermint tea in the fridge – and that's when it clicked.
               </p>
-              <p className="text-neutral-700 text-lg">
-                After months of perfecting the formula and working with Ireland's purest spring water source in the Wicklow Mountains, Mintee was launched with a simple mission: to create the most refreshing, functional water with zero sugar and zero calories.
+              <p className="text-neutral-700 text-lg mb-6">
+                That cool, crisp flavour felt like a little daily treat.
+              </p>
+              <p className="text-neutral-700 text-lg mb-6">
+                Mintee was born out of that moment: a clean, crisp, naturally refreshing drink that makes drinking water something you actually look forward to.
+              </p>
+              <p className="text-neutral-700 text-lg mb-6">
+                Built by The Chill Co, we're on a mission to bring purposeful, plant-based drinks to life. We use real Irish peppermint leaves, not artificial flavourings, and our drinks are made with care for both people and planet.
+              </p>
+              <p className="text-neutral-700 text-lg mb-6">
+                We're here to create better drinks, one chilled bottle at a time.
+              </p>
+              <p className="text-neutral-700 text-lg italic">
+                – Rebecca, Mintee Founder 🌿
               </p>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -75,14 +87,14 @@ const Story: React.FC = () => {
               className="relative"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="https://images.pexels.com/photos/2553713/pexels-photo-2553713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" 
-                  alt="Mintee founder" 
-                  className="w-full h-[500px] object-cover"
+                <img
+                  src="https://ik.imagekit.io/boostkit/Mintee/BecJohn.png?updatedAt=1745526582952"
+                  alt="Mintee founders"
+                  className="w-full h-[500px] object-contain"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
               </div>
-              
+
               {/* Decorative elements */}
               <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-primary-200 rounded-full z-0 opacity-60 blur-xl"></div>
               <div className="absolute -top-8 -left-8 w-32 h-32 bg-primary-300 rounded-full z-0 opacity-60 blur-xl animate-pulse-slow"></div>
@@ -90,11 +102,11 @@ const Story: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="py-20 md:py-28 bg-neutral-50 relative overflow-hidden">
         {/* Background elements */}
         <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-primary-50 opacity-50 blur-3xl"></div>
-        
+
         <div className="container mx-auto relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <motion.div
@@ -106,8 +118,8 @@ const Story: React.FC = () => {
             >
               What We Stand For
             </motion.div>
-            
-            <motion.h2 
+
+            <motion.h2
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -116,7 +128,7 @@ const Story: React.FC = () => {
             >
               Our Values
             </motion.h2>
-            
+
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -127,7 +139,7 @@ const Story: React.FC = () => {
               These core principles guide everything we do at Mintee, from product development to sustainability commitments.
             </motion.p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -144,7 +156,7 @@ const Story: React.FC = () => {
                 We believe in creating products with natural ingredients that support wellbeing. No artificial additives, ever.
               </p>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -160,7 +172,7 @@ const Story: React.FC = () => {
                 We're committed to minimizing our environmental impact through responsible sourcing and recyclable packaging.
               </p>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -179,12 +191,12 @@ const Story: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="py-20 md:py-28 relative overflow-hidden">
         {/* Background element */}
         <div className="absolute inset-0 bg-white"></div>
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-primary-50 opacity-60 blur-3xl"></div>
-        
+
         <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -207,13 +219,13 @@ const Story: React.FC = () => {
               <p className="text-neutral-700 text-lg mb-8">
                 We take inspiration from Ireland's lush green landscapes and commitment to sustainability, ensuring our processes and packaging respect our natural environment.
               </p>
-              
+
               <Link to="/shop" className="btn btn-primary group">
                 Discover Our Products
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -222,9 +234,9 @@ const Story: React.FC = () => {
               className="order-1 md:order-2"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="https://images.pexels.com/photos/2382728/pexels-photo-2382728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" 
-                  alt="Irish landscape with mountains" 
+                <img
+                  src="https://images.pexels.com/photos/2382728/pexels-photo-2382728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                  alt="Irish landscape with mountains"
                   className="w-full h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
@@ -233,12 +245,12 @@ const Story: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="py-20 md:py-28 bg-mint-gradient text-white relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white opacity-5"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-white opacity-5"></div>
-        
+
         <div className="container mx-auto relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <motion.div
@@ -250,8 +262,8 @@ const Story: React.FC = () => {
             >
               Join Us
             </motion.div>
-            
-            <motion.h2 
+
+            <motion.h2
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -260,7 +272,7 @@ const Story: React.FC = () => {
             >
               Join the Mintee Movement
             </motion.h2>
-            
+
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -270,7 +282,7 @@ const Story: React.FC = () => {
             >
               Be part of our journey to refresh Ireland (and beyond) naturally. Experience the difference that Mintee can make to your day.
             </motion.p>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
       {/* Background gradient circles */}
       <div className="absolute top-1/2 left-0 w-[900px] h-[900px] rounded-full bg-gradient-radial from-primary-100 to-transparent opacity-50 -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
       <div className="absolute -bottom-24 right-0 w-[600px] h-[600px] rounded-full bg-primary-50 opacity-50 blur-3xl"></div>
-      
+
       <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-x-12 gap-y-16 items-center">
           <motion.div
@@ -37,26 +37,27 @@ const Hero: React.FC = () => {
               </Link>
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.19, 1, 0.22, 1] }}
             className="md:col-span-6 lg:col-span-7 relative"
           >
-            <div className="relative z-10 aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
-              <img 
-                src="https://images.pexels.com/photos/5537828/pexels-photo-5537828.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" 
-                alt="Mintee water bottle" 
-                className="w-full h-full object-cover"
+            <div className="relative z-10 flex justify-center items-center">
+              <img
+                src="https://ik.imagekit.io/boostkit/Mintee/Home_Bottles_Small.png?updatedAt=1745526582765"
+                alt="Mintee water bottle"
+                className="w-full h-auto"
+                style={{ objectFit: "contain", maxHeight: "600px" }}
               />
-              
+
               {/* Floating product badges */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="absolute -left-6 top-1/4 glass-card p-4 shadow-lg backdrop-blur-md"
+                className="absolute left-0 top-1/4 glass-card p-4 shadow-lg backdrop-blur-md"
               >
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-full bg-primary-50 flex items-center justify-center mr-3">
@@ -65,12 +66,12 @@ const Hero: React.FC = () => {
                   <span className="text-sm font-medium">Zero Sugar</span>
                 </div>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="absolute -right-6 top-2/3 glass-card p-4 shadow-lg backdrop-blur-md"
+                className="absolute right-0 top-2/3 glass-card p-4 shadow-lg backdrop-blur-md"
               >
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-full bg-primary-50 flex items-center justify-center mr-3">
@@ -80,14 +81,14 @@ const Hero: React.FC = () => {
                 </div>
               </motion.div>
             </div>
-            
+
             {/* Background design elements */}
             <div className="absolute -bottom-6 -right-6 w-60 h-60 bg-primary-300 rounded-full z-0 opacity-20 animate-pulse-slow"></div>
             <div className="absolute -top-6 -left-6 w-40 h-40 bg-primary-400 rounded-full z-0 opacity-20 animate-float"></div>
           </motion.div>
         </div>
       </div>
-      
+
       {/* Features strip */}
       <div className="relative mt-20 md:mt-28 lg:mt-32 py-8 bg-gradient-to-r from-primary-50 to-primary-100">
         <div className="container mx-auto">

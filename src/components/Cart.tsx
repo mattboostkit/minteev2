@@ -12,7 +12,7 @@ interface CartProps {
 const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
   const { cartItems, updateQuantity, removeFromCart, subtotal } = useCart();
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
-  
+
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -31,7 +31,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
 
   return (
     <>
-      <div 
+      <div
         className="fixed inset-0 bg-black/60 z-50 flex justify-end backdrop-blur-sm"
         onClick={handleBackdropClick}
       >
@@ -44,21 +44,21 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
         >
           <div className="flex items-center justify-between p-6 border-b">
             <h2 className="font-inter-tight font-semibold text-2xl">Your Cart</h2>
-            <button 
-              onClick={onClose} 
+            <button
+              onClick={onClose}
               className="p-2 rounded-full text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 transition-colors"
             >
               <X weight="bold" className="w-5 h-5" />
             </button>
           </div>
-          
+
           <div className="flex-grow overflow-y-auto p-6">
             {cartItems.length === 0 ? (
               <div className="h-full flex flex-col items-center justify-center text-center">
                 <ShoppingBag weight="thin" className="w-24 h-24 text-neutral-300 mb-6" />
                 <h3 className="font-inter-tight font-semibold text-2xl mb-4">Your cart is empty</h3>
                 <p className="text-neutral-500 mb-8">Looks like you haven't added any products to your cart yet.</p>
-                <button 
+                <button
                   onClick={onClose}
                   className="btn btn-primary"
                 >
@@ -76,25 +76,25 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
                     className="flex items-start py-6 border-b border-neutral-100"
                   >
                     <div className="w-20 h-20 rounded-xl overflow-hidden mr-4 bg-neutral-100">
-                      <img 
-                        src={item.product.imageSrc} 
+                      <img
+                        src={item.product.imageSrc}
                         alt={item.product.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
-                    
+
                     <div className="flex-grow">
                       <h4 className="font-medium text-lg mb-1">{item.product.name}</h4>
                       <p className="text-sm text-neutral-500 mb-3">{item.product.size}</p>
                       <div className="flex items-center">
-                        <button 
+                        <button
                           onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
                           className="w-8 h-8 flex items-center justify-center bg-neutral-100 rounded-full hover:bg-neutral-200 transition-colors"
                         >
                           <Minus weight="bold" className="w-4 h-4" />
                         </button>
                         <span className="mx-3 w-8 text-center font-medium">{item.quantity}</span>
-                        <button 
+                        <button
                           onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
                           className="w-8 h-8 flex items-center justify-center bg-neutral-100 rounded-full hover:bg-neutral-200 transition-colors"
                         >
@@ -102,10 +102,10 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
                         </button>
                       </div>
                     </div>
-                    
+
                     <div className="flex flex-col items-end">
                       <span className="font-semibold text-lg">£{(item.product.price * item.quantity).toFixed(2)}</span>
-                      <button 
+                      <button
                         onClick={() => removeFromCart(item.product.id)}
                         className="mt-3 p-2 rounded-full text-neutral-400 hover:bg-neutral-100 hover:text-red-500 transition-colors"
                       >
@@ -117,7 +117,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
               </AnimatePresence>
             )}
           </div>
-          
+
           {cartItems.length > 0 && (
             <div className="p-6 border-t">
               <div className="flex justify-between mb-2">
@@ -132,7 +132,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
                 <span>Total</span>
                 <span>£{(subtotal + 3.99).toFixed(2)}</span>
               </div>
-              <button 
+              <button
                 onClick={handleCheckout}
                 className="btn btn-primary w-full py-4"
               >
