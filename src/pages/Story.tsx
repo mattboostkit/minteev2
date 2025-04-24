@@ -22,7 +22,7 @@ const Story: React.FC = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="font-inter-tight font-bold text-4xl md:text-6xl mb-5"
+              className="font-gazpacho font-black text-4xl md:text-6xl mb-5"
             >
               Our Story
             </motion.h1>
@@ -55,7 +55,7 @@ const Story: React.FC = () => {
               <div className="inline-block mb-5 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
                 Our Journey
               </div>
-              <h2 className="font-inter-tight font-bold text-4xl md:text-5xl mb-6">The Mintee Story</h2>
+              <h2 className="font-gazpacho font-black text-4xl md:text-5xl mb-6">The Mintee Story</h2>
               <p className="text-neutral-700 text-lg mb-6">
                 I've been drinking peppermint tea for as long as I can remember. It helped with bloating, soothed my headaches, and was my go-to for caffeine-free hydration. But honestly? Plain water just didn't excite me.
               </p>
@@ -124,7 +124,7 @@ const Story: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="font-inter-tight font-bold text-4xl md:text-5xl mb-5"
+              className="font-gazpacho font-black text-4xl md:text-5xl mb-5"
             >
               Our Values
             </motion.h2>
@@ -151,7 +151,7 @@ const Story: React.FC = () => {
               <div className="bg-primary-50 w-20 h-20 rounded-xl flex items-center justify-center mb-6">
                 <Leaf className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="font-inter-tight font-semibold text-2xl mb-4">Natural Goodness</h3>
+              <h3 className="font-gazpacho font-black text-2xl mb-4">Natural Goodness</h3>
               <p className="text-neutral-600 text-lg">
                 We believe in creating products with natural ingredients that support wellbeing. No artificial additives, ever.
               </p>
@@ -167,7 +167,7 @@ const Story: React.FC = () => {
               <div className="bg-primary-50 w-20 h-20 rounded-xl flex items-center justify-center mb-6">
                 <Recycle className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="font-inter-tight font-semibold text-2xl mb-4">Sustainability</h3>
+              <h3 className="font-gazpacho font-black text-2xl mb-4">Sustainability</h3>
               <p className="text-neutral-600 text-lg">
                 We're committed to minimizing our environmental impact through responsible sourcing and recyclable packaging.
               </p>
@@ -183,7 +183,7 @@ const Story: React.FC = () => {
               <div className="bg-primary-50 w-20 h-20 rounded-xl flex items-center justify-center mb-6">
                 <Heart className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="font-inter-tight font-semibold text-2xl mb-4">Community</h3>
+              <h3 className="font-gazpacho font-black text-2xl mb-4">Community</h3>
               <p className="text-neutral-600 text-lg">
                 We proudly support Irish communities and source locally whenever possible to boost the local economy.
               </p>
@@ -209,7 +209,7 @@ const Story: React.FC = () => {
               <div className="inline-block mb-5 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
                 Irish Roots
               </div>
-              <h2 className="font-inter-tight font-bold text-4xl md:text-5xl mb-6">Our Irish Heritage</h2>
+              <h2 className="font-gazpacho font-black text-4xl md:text-5xl mb-6">Our Irish Heritage</h2>
               <p className="text-neutral-700 text-lg mb-6">
                 Proudly Irish, Mintee sources its water from a pristine spring in the Wicklow Mountains, known for its exceptional purity and mineral content.
               </p>
@@ -268,7 +268,7 @@ const Story: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="font-inter-tight font-bold text-4xl md:text-5xl mb-5 text-white"
+              className="font-gazpacho font-black text-4xl md:text-5xl mb-5 text-white"
             >
               Join the Mintee Movement
             </motion.h2>

@@ -34,7 +34,7 @@ const TestimonialSection: React.FC = () => {
     <section className="py-28 md:py-36 bg-mint-gradient-soft relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute -bottom-40 -left-40 w-[600px] h-[600px] rounded-full bg-primary-100 opacity-40 blur-3xl"></div>
-      
+
       <div className="container mx-auto relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <motion.div
@@ -46,17 +46,17 @@ const TestimonialSection: React.FC = () => {
           >
             Testimonials
           </motion.div>
-          
-          <motion.h2 
+
+          <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="font-inter-tight font-bold text-4xl md:text-5xl mb-6"
+            className="font-gazpacho font-black text-4xl md:text-5xl mb-6"
           >
             What Our <span className="text-gradient">Customers</span> Say
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -67,7 +67,7 @@ const TestimonialSection: React.FC = () => {
             Don't just take our word for it - hear from our community of Mintee enthusiasts.
           </motion.p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {testimonials.map((testimonial, index) => (
             <motion.div
@@ -81,29 +81,29 @@ const TestimonialSection: React.FC = () => {
               <div className="absolute top-8 right-8 text-primary-100">
                 <Quotes size={36} weight="fill" />
               </div>
-              
+
               <div className="flex items-center mb-6">
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name} 
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
                   className="w-20 h-20 rounded-full object-cover mr-5 ring-2 ring-primary-100"
                 />
                 <div>
-                  <h4 className="font-inter-tight font-semibold text-lg">{testimonial.name}</h4>
+                  <h4 className="font-gazpacho font-black text-lg">{testimonial.name}</h4>
                   <p className="text-neutral-500 text-sm">{testimonial.role}</p>
                 </div>
               </div>
-              
+
               <div className="flex mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star 
-                    key={i} 
+                  <Star
+                    key={i}
                     weight={i < testimonial.rating ? "fill" : "regular"}
                     className={`w-5 h-5 ${i < testimonial.rating ? 'text-yellow-400' : 'text-neutral-300'}`}
                   />
                 ))}
               </div>
-              
+
               <blockquote className="text-neutral-700 italic text-lg leading-relaxed">
                 "{testimonial.quote}"
               </blockquote>

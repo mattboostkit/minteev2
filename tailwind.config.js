@@ -5,17 +5,17 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: 'oklch(67% 0.16 182.503)', // Slightly darker and more vibrant
-          50: 'oklch(96% 0.03 182.503)',
-          100: 'oklch(92% 0.05 182.503)',
-          200: 'oklch(87% 0.08 182.503)',
-          300: 'oklch(82% 0.10 182.503)',
-          400: 'oklch(77% 0.13 182.503)',
-          500: 'oklch(67% 0.16 182.503)',
-          600: 'oklch(62% 0.18 182.503)',
-          700: 'oklch(57% 0.19 182.503)',
-          800: 'oklch(52% 0.17 182.503)',
-          900: 'oklch(47% 0.16 182.503)',
+          DEFAULT: 'rgb(78, 223, 204)', // #4edfcc - Main color
+          50: 'rgb(202, 255, 238)', // #caffee - Lightest shade
+          100: 'rgb(191, 252, 231)', // Slightly darker than 50
+          200: 'rgb(180, 249, 225)', // Gradient between 100 and 300
+          300: 'rgb(170, 246, 219)', // Gradient between 200 and 400
+          400: 'rgb(161, 239, 213)', // #a1efd5 - Medium shade
+          500: 'rgb(135, 235, 210)', // Gradient between 400 and 600
+          600: 'rgb(110, 231, 208)', // Gradient between 500 and DEFAULT
+          700: 'rgb(70, 200, 184)', // Slightly darker than DEFAULT
+          800: 'rgb(62, 178, 163)', // Darker shade
+          900: 'rgb(54, 156, 143)', // Darkest shade
         },
         accent: {
           DEFAULT: 'oklch(65% 0.2 145)',
@@ -46,6 +46,7 @@ export default {
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
         'inter-tight': ['"Inter Tight"', 'sans-serif'],
+        'gazpacho': ['Gazpacho', 'sans-serif'],
       },
       spacing: {
         '8': '8px',
@@ -59,7 +60,7 @@ export default {
       },
       borderRadius: {
         DEFAULT: '8px',
-        'lg': '16px', 
+        'lg': '16px',
         'xl': '24px',
         '2xl': '32px',
         'full': '9999px',
@@ -86,12 +87,12 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'mint-gradient': 'linear-gradient(to right, oklch(67% 0.16 182.503), oklch(72% 0.14 170))',
-        'mint-gradient-soft': 'linear-gradient(to right, oklch(96% 0.03 182.503), oklch(92% 0.05 170))',
+        'mint-gradient': 'linear-gradient(to right, rgb(78, 223, 204), rgb(110, 231, 208))',
+        'mint-gradient-soft': 'linear-gradient(to right, rgb(202, 255, 238), rgb(191, 252, 231))',
       },
       boxShadow: {
         'soft': '0 4px 20px rgba(0, 0, 0, 0.05)',
-        'glow': '0 0 15px rgba(0, 155, 144, 0.5)',
+        'glow': '0 0 15px rgba(78, 223, 204, 0.5)',
       },
     },
   },

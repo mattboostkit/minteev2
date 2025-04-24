@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FacebookLogo, InstagramLogo, TwitterLogo } from 'phosphor-react';
+import Logo from './Logo';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -10,13 +11,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <Link to="/" className="flex items-center mb-5">
-              <img
-                src="https://ik.imagekit.io/boostkit/Mintee/Mintee%20Logo_White.png?updatedAt=1745526582549"
-                alt="Mintee Logo"
-                className="h-10"
-              />
-            </Link>
+            <Logo color="white" className="mb-5" />
             <p className="text-neutral-400 mb-5">
               Refreshing peppermint-infused water. Zero sugar, zero calories, made in Ireland.
             </p>
@@ -34,7 +29,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="font-inter-tight font-medium text-lg mb-5 text-white">Quick Links</h4>
+            <h4 className="font-gazpacho font-black text-lg mb-5 text-white">Quick Links</h4>
             <ul className="space-y-3">
               <li>
                 <Link to="/" className="text-neutral-400 hover:text-primary transition-colors">Home</Link>
@@ -49,7 +44,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="font-inter-tight font-medium text-lg mb-5 text-white">Help</h4>
+            <h4 className="font-gazpacho font-black text-lg mb-5 text-white">Help</h4>
             <ul className="space-y-3">
               <li>
                 <Link to="/faq" className="text-neutral-400 hover:text-primary transition-colors">FAQ</Link>
@@ -67,7 +62,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="font-inter-tight font-medium text-lg mb-5 text-white">Newsletter</h4>
+            <h4 className="font-gazpacho font-black text-lg mb-5 text-white">Newsletter</h4>
             <p className="text-neutral-400 mb-5">
               Subscribe to get special offers, free giveaways, and product launches.
             </p>

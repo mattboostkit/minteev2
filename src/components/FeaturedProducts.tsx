@@ -14,7 +14,7 @@ const FeaturedProducts: React.FC = () => {
       {/* Background elements */}
       <div className="absolute top-0 left-1/2 w-[900px] h-[900px] rounded-full bg-gradient-radial from-primary-50 to-transparent opacity-40 -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
 
-      <div className="container mx-auto relative z-10">
+      <div className="container mx-auto relative z-10 px-4 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6">
           <div className="max-w-2xl">
             <motion.div
@@ -22,7 +22,7 @@ const FeaturedProducts: React.FC = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-block mb-6 px-4 py-1.5 rounded-full bg-primary/15 text-primary text-sm font-medium"
+              className="inline-block mb-6 px-4 py-1.5 rounded-full bg-primary-600 text-white text-sm font-medium"
             >
               Our Products
             </motion.div>
@@ -32,7 +32,7 @@ const FeaturedProducts: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="font-inter-tight font-bold text-4xl md:text-5xl mb-6"
+              className="font-gazpacho font-black text-4xl md:text-5xl mb-6"
             >
               Discover <span className="text-gradient">Mintee</span>
             </motion.h2>
@@ -54,7 +54,7 @@ const FeaturedProducts: React.FC = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
           {featuredProducts.map((product, index) => (
             <motion.div
               key={product.id}
@@ -62,18 +62,17 @@ const FeaturedProducts: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 m-2"
             >
-              <div className="aspect-square overflow-hidden relative">
+              <div className="aspect-square overflow-hidden relative p-4 bg-primary-50/20">
                 <img
                   src={product.imageSrc}
                   alt={product.name}
                   className="w-full h-full object-contain transition-transform duration-700 hover:scale-105"
                 />
-                {/* Removed overlay for better UX */}
               </div>
 
-              <div className="p-8">
+              <div className="p-8 md:p-10">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="badge badge-primary">
                     {product.size}
@@ -83,7 +82,7 @@ const FeaturedProducts: React.FC = () => {
                   </span>
                 </div>
 
-                <h3 className="font-inter-tight font-semibold text-2xl mb-3">
+                <h3 className="font-gazpacho font-black text-2xl mb-3">
                   {product.name}
                 </h3>
 

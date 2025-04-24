@@ -5,40 +5,40 @@ import { PaperPlaneTilt } from 'phosphor-react';
 const NewsletterSection: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
       // This would typically send the email to a server
       setIsSubmitted(true);
       setEmail('');
-      
+
       // Reset after 3 seconds
       setTimeout(() => {
         setIsSubmitted(false);
       }, 3000);
     }
   };
-  
+
   return (
     <section className="py-28 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-neutral-50"></div>
       <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-primary-50 blur-3xl"></div>
       <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-primary-50 blur-3xl"></div>
-      
+
       <div className="container mx-auto relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="font-inter-tight font-bold text-4xl md:text-5xl mb-6"
+            className="font-gazpacho font-black text-4xl md:text-5xl mb-6"
           >
             Stay refreshed with our updates
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -48,8 +48,8 @@ const NewsletterSection: React.FC = () => {
           >
             Subscribe to our newsletter for exclusive offers, recipe ideas, and be the first to know about new products.
           </motion.p>
-          
-          <motion.form 
+
+          <motion.form
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -73,7 +73,7 @@ const NewsletterSection: React.FC = () => {
               Subscribe
             </button>
           </motion.form>
-          
+
           {isSubmitted && (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -83,7 +83,7 @@ const NewsletterSection: React.FC = () => {
               Thank you for subscribing!
             </motion.div>
           )}
-          
+
           <p className="text-xs text-neutral-500 mt-5">
             By subscribing, you agree to our Privacy Policy. We'll never share your details with anyone else.
           </p>

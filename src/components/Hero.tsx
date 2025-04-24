@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
             <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-primary/15 text-primary text-sm font-medium">
               Natural Refreshment
             </div>
-            <h1 className="font-inter-tight font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-[1.1]">
+            <h1 className="font-gazpacho font-black text-5xl md:text-6xl lg:text-7xl mb-8 leading-[1.1]">
               Put a <span className="text-gradient">pep</span> in your step
             </h1>
             <p className="text-lg md:text-xl text-neutral-600 mb-10 max-w-xl">

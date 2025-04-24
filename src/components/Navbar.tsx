@@ -3,6 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import { List, X, ShoppingCart, ArrowRight } from 'phosphor-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCart } from '../contexts/CartContext';
+import Logo from './Logo';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,13 +44,7 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center" onClick={() => setIsOpen(false)}>
-            <img
-              src="https://ik.imagekit.io/boostkit/Mintee/Mintee%20Logo.png?updatedAt=1745526582680"
-              alt="Mintee Logo"
-              className="h-8 md:h-10"
-            />
-          </Link>
+          <Logo onClick={() => setIsOpen(false)} />
 
           <nav className="hidden md:flex items-center space-x-8">
             <NavLink to="/" className={({ isActive }) =>
@@ -114,13 +109,7 @@ const Navbar: React.FC = () => {
           >
             <div className="flex flex-col h-full p-4">
               <div className="flex items-center justify-between mb-8">
-                <Link to="/" className="flex items-center" onClick={() => setIsOpen(false)}>
-                  <img
-                    src="https://ik.imagekit.io/boostkit/Mintee/Mintee%20Logo.png?updatedAt=1745526582680"
-                    alt="Mintee Logo"
-                    className="h-8"
-                  />
-                </Link>
+                <Logo onClick={() => setIsOpen(false)} />
                 <button
                   className="text-neutral-700 focus:outline-none p-2"
                   onClick={() => setIsOpen(false)}

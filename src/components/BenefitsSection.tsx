@@ -58,7 +58,7 @@ const BenefitsSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="font-inter-tight font-bold text-4xl md:text-5xl mb-6"
+            className="font-gazpacho font-black text-4xl md:text-5xl mb-6"
           >
             Better for you, <span className="text-gradient">better for all</span>
           </motion.h2>
@@ -95,7 +95,7 @@ const BenefitsSection: React.FC = () => {
                 {benefit.icon}
               </div>
 
-              <h3 className={`font-inter-tight font-semibold text-xl md:text-2xl mb-4 ${
+              <h3 className={`font-gazpacho font-black text-xl md:text-2xl mb-4 ${
                 index === 3 ? 'text-white' : 'text-neutral-900'
               }`}>
                 {benefit.title}

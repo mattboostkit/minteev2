@@ -12,16 +12,16 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
   const { addToCart } = useCart();
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
       {products.map((product, index) => (
         <motion.div
           key={product.id}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: index * 0.1 }}
-          className="bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+          className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 m-2"
         >
-          <div className="aspect-square overflow-hidden relative">
+          <div className="aspect-square overflow-hidden relative p-4 bg-primary-50/20">
             <img
               src={product.imageSrc}
               alt={product.name}
@@ -29,7 +29,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
             />
           </div>
 
-          <div className="p-8">
+          <div className="p-8 md:p-10">
             <div className="flex flex-wrap gap-2 mb-3">
               <span className="badge badge-primary">
                 {product.size}
@@ -40,7 +40,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
             </div>
 
             <div className="flex justify-between items-start mb-3">
-              <h3 className="font-inter-tight font-semibold text-2xl">
+              <h3 className="font-gazpacho font-black text-2xl">
                 {product.name}
               </h3>
               <span className="font-semibold text-xl">£{product.price.toFixed(2)}</span>

@@ -30,7 +30,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ clientSecret, onSuccess, on
     setProcessing(true);
 
     const cardElement = elements.getElement(CardElement);
-    
+
     if (!cardElement) {
       setError('Card element not found');
       setProcessing(false);
@@ -58,7 +58,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ clientSecret, onSuccess, on
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="bg-white p-4 rounded-lg border border-neutral-200">
-        <CardElement 
+        <CardElement
           options={{
             style: {
               base: {
@@ -75,13 +75,13 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ clientSecret, onSuccess, on
           }}
         />
       </div>
-      
+
       {error && (
         <div className="bg-red-50 text-red-600 p-3 rounded-lg text-sm">
           {error}
         </div>
       )}
-      
+
       <div className="flex gap-4">
         <button
           type="button"
@@ -117,7 +117,7 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ isOpen, onClose }) => {
   React.useEffect(() => {
     if (isOpen && cartItems.length > 0) {
       setLoading(true);
-      
+
       // In a real implementation, this would call the Supabase Edge Function
       // to create a payment intent and get a client secret
       const fetchPaymentIntent = async () => {
@@ -133,11 +133,11 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ isOpen, onClose }) => {
               shippingCost: 3.99
             })
           });
-          
+
           if (!response.ok) {
             throw new Error('Failed to create payment intent');
           }
-          
+
           const data = await response.json();
           setClientSecret(data.clientSecret);
           setLoading(false);
@@ -147,14 +147,14 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ isOpen, onClose }) => {
           // Handle error - perhaps show an error message to the user
         }
       };
-      
+
       // For demo purposes, we'll simulate the API call
       // In production, uncomment the fetchPaymentIntent() call and remove this setTimeout
       setTimeout(() => {
         setClientSecret('client_secret_placeholder');
         setLoading(false);
       }, 1000);
-      
+
       // fetchPaymentIntent();
     }
   }, [isOpen, cartItems]);
@@ -174,7 +174,7 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div 
+    <div
       className="fixed inset-0 bg-black/60 z-50 flex justify-center items-center backdrop-blur-sm"
       onClick={handleBackdropClick}
     >
@@ -192,9 +192,9 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ isOpen, onClose }) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h3 className="font-inter-tight font-semibold text-2xl mb-4">Payment Successful!</h3>
+            <h3 className="font-gazpacho font-black text-2xl mb-4">Payment Successful!</h3>
             <p className="text-neutral-600 mb-6">Your order has been placed and will be processed soon.</p>
-            <button 
+            <button
               onClick={onClose}
               className="btn btn-primary"
             >
@@ -204,9 +204,9 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ isOpen, onClose }) => {
         ) : (
           <>
             <div className="flex items-center justify-between mb-6">
-              <h2 className="font-inter-tight font-semibold text-2xl">Checkout</h2>
-              <button 
-                onClick={onClose} 
+              <h2 className="font-gazpacho font-black text-2xl">Checkout</h2>
+              <button
+                onClick={onClose}
                 className="p-2 rounded-full text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 transition-colors"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -214,7 +214,7 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ isOpen, onClose }) => {
                 </svg>
               </button>
             </div>
-            
+
             <div className="mb-6">
               <div className="flex justify-between mb-2">
                 <span className="text-neutral-600">Subtotal</span>
@@ -229,7 +229,7 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ isOpen, onClose }) => {
                 <span>£{(subtotal + 3.99).toFixed(2)}</span>
               </div>
             </div>
-            
+
             {loading ? (
               <div className="py-8 text-center">
                 <div className="w-10 h-10 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
@@ -237,8 +237,8 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ isOpen, onClose }) => {
               </div>
             ) : (
               <Elements stripe={stripePromise}>
-                <CheckoutForm 
-                  clientSecret={clientSecret} 
+                <CheckoutForm
+                  clientSecret={clientSecret}
                   onSuccess={handlePaymentSuccess}
                   onCancel={onClose}
                 />

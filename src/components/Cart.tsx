@@ -43,7 +43,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
           className="bg-white w-full max-w-md h-full flex flex-col"
         >
           <div className="flex items-center justify-between p-6 border-b">
-            <h2 className="font-inter-tight font-semibold text-2xl">Your Basket</h2>
+            <h2 className="font-gazpacho font-black text-2xl">Your Basket</h2>
             <button
               onClick={onClose}
               className="p-2 rounded-full text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 transition-colors"
@@ -56,7 +56,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
             {cartItems.length === 0 ? (
               <div className="h-full flex flex-col items-center justify-center text-center">
                 <ShoppingBag weight="thin" className="w-24 h-24 text-neutral-300 mb-6" />
-                <h3 className="font-inter-tight font-semibold text-2xl mb-4">Your basket is empty</h3>
+                <h3 className="font-gazpacho font-black text-2xl mb-4">Your basket is empty</h3>
                 <p className="text-neutral-500 mb-8">Looks like you haven't added any products to your basket yet.</p>
                 <button
                   onClick={onClose}
