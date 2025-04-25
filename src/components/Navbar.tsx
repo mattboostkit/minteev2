@@ -38,11 +38,12 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full transition-all duration-300 pt-safe ${
         scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
       }`}
+      style={{ paddingTop: 'calc(env(safe-area-inset-top) + 8px)' }}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Logo onClick={() => setIsOpen(false)} />
 
