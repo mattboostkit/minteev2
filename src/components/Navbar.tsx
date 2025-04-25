@@ -101,11 +101,12 @@ const Navbar: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-white/95 backdrop-blur-md z-50 md:hidden"
+            className="fixed inset-0 bg-white/95 backdrop-blur-md z-50 md:hidden overflow-y-auto"
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
+            style={{ height: '100%', paddingTop: 'env(safe-area-inset-top)' }}
           >
             <div className="flex flex-col h-full p-4">
               <div className="flex items-center justify-between mb-8">

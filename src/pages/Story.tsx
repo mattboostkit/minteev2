@@ -235,8 +235,8 @@ const Story: React.FC = () => {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/2382728/pexels-photo-2382728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                  alt="Irish landscape with mountains"
+                  src="https://ik.imagekit.io/boostkit/Mintee/Dublin.jpg?updatedAt=1745571757327"
+                  alt="Dublin cityscape"
                   className="w-full h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
